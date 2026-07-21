@@ -357,7 +357,7 @@ st.write(
     "built with Microsoft Power BI."
 )
 
-powerbi_link = ""
+powerbi_link = "https://app.powerbi.com/view?r=eyJrIjoiMjAzNzkxNWUtNmU3YS00M2FlLTk1OTctMjhmNDE4ZTAyOGUyIiwidCI6IjcwOGY3YjViLTIwZmMtNGJjOC05MTUwLWIxMDE1YTMwOGI5YyJ9"
 
 st.markdown(
     f"""
