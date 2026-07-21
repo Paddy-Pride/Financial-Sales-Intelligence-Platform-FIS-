@@ -170,7 +170,8 @@ model = load_model()
 # -----------------------------
 # Header
 # -----------------------------
-st.title("📊 Financial Sales Intelligence Platform")
+st.title("📊 Financial Sales Intelligence-AI-Model
+")
 st.subheader("AI Sales Prediction System")
 
 st.write(
@@ -343,3 +344,36 @@ with info_col3:
         "RMSE",
         "29,093"
     )
+# -----------------------------
+# Power BI Dashboard
+# -----------------------------
+
+st.divider()
+
+st.subheader("📊 Executive Power BI Dashboard")
+
+st.write(
+    "View the complete interactive financial sales analytics dashboard "
+    "built with Microsoft Power BI."
+)
+
+powerbi_link = ""
+
+st.markdown(
+    f"""
+    <a href="{powerbi_link}" target="_blank">
+        <button style="
+            background-color:#f2c811;
+            color:black;
+            padding:12px 25px;
+            border:none;
+            border-radius:10px;
+            font-size:18px;
+            font-weight:bold;
+            cursor:pointer;">
+            🚀 Open Power BI Dashboard
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
