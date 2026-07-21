@@ -1,10 +1,16 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import base64
 import streamlit as st
+import base64
+import os
 
 def add_bg(image_file):
+
+    if not os.path.exists(image_file):
+        st.error(f"Background image not found: {image_file}")
+        return
+
     with open(image_file, "rb") as image:
         encoded = base64.b64encode(image.read()).decode()
 
@@ -14,42 +20,24 @@ def add_bg(image_file):
 
         .stApp {{
             background-image:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.45),
-                    rgba(0, 0, 0, 0.45)
-                ),
-                url("data:image/png;base64,{encoded}");
+            linear-gradient(
+                rgba(0,0,0,0.55),
+                rgba(0,0,0,0.55)
+            ),
+            url("data:image/png;base64,{encoded}");
+
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }}
 
-        /* Make the header transparent */
-        header {{
-            background: rgba(0,0,0,0) !important;
-        }}
-
-        /* Transparent toolbar */
-        [data-testid="stToolbar"] {{
-            background: transparent;
-        }}
-
-        /* Transparent main container */
-        [data-testid="stAppViewContainer"] {{
-            background: transparent;
-        }}
-
-        /* Glass sidebar */
-        section[data-testid="stSidebar"] {{
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(10px);
-        }}
-
         </style>
         """,
         unsafe_allow_html=True
     )
+
+
 add_bg("Executive Dashboard Image.PNG")
 # -----------------------------
 # Page Configuration
