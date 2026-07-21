@@ -371,7 +371,7 @@ st.markdown(
             font-size:18px;
             font-weight:bold;
             cursor:pointer;">
-            ↗️Open Power BI Dashboard
+            ↗️Open Interactive Power BI Dashboard
         </button>
     </a>
     """,
