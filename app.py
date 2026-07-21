@@ -1,7 +1,30 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import streamlit as st
+import base64
 
+def add_bg(image_file):
+    with open(image_file, "rb") as image:
+        encoded = base64.b64encode(image.read()).decode()
+
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("data:image/jpg;base64,{encoded}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# Set the background
+add_bg("Executive Sales Dashboard.jpg")
 # -----------------------------
 # Page Configuration
 # -----------------------------
