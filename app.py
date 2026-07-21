@@ -371,7 +371,7 @@ st.markdown(
             font-size:18px;
             font-weight:bold;
             cursor:pointer;">
-            🚀 Open Power BI Dashboard
+            ↗️Open Power BI Dashboard
         </button>
     </a>
     """,
@@ -400,7 +400,7 @@ st.markdown(
     </style>
 
     <div class="footer">
-        Trained by <b> Pride @ Cyber_Ninja</b>
+        Trained using Microsoft`s Financial Dataset by <b> Pride @ Cyber_Ninja</b>
     </div>
     """,
     unsafe_allow_html=True
