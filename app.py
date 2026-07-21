@@ -6,7 +6,7 @@ import joblib
 # Page Configuration
 # -----------------------------
 st.set_page_config(
-    page_title="Financial Sales AI Forecast",
+    page_title="Financial Sales Forecast AI Model",
     page_icon="📊",
     layout="centered"
 )
